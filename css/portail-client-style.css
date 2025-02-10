@@ -377,7 +377,7 @@ a {
     body header.banner {
       text-align: center;
       color: white;
-      background-image: url("bg-01.jpg");
+      background-image: url("https://thomaspiguet.github.io/portail-client/portail-client_files/img/bg-01.jpg");
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: top center;
@@ -539,7 +539,7 @@ a {
     .internal_pages header.banner {
       text-align: center;
       color: white;
-      background-image: url("../img/2231.png");
+      background-image: url("https://thomaspiguet.github.io/portail-client/portail-client_files/img/bg-01.jpg");
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: top center;
