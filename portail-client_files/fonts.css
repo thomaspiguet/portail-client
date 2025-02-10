@@ -25,12 +25,12 @@ $font_3: 'Arial';
 $font_4: 'sans-serif';*/
 /*$sub-brand-orange: #f74141;*/
 /* General Links */
-@import url("../../../../components/roboto/roboto.css");
-@import url("../../../../components/font-awesome/css/font-awesome.css");
-@import url("../../../../components/simple-line-icons/simple-line-icons.css");
-@import url("../../../../components/medicine-and-health/font/_flaticon.css");
-@import url("../../../../components/material-icons/material-icons.css");
-@import url("../../../../components/medicine-and-health/font/flaticon.css");
+@import url("components/roboto/roboto.css");
+@import url("components/font-awesome/css/font-awesome.css");
+@import url("components/simple-line-icons/simple-line-icons.css");
+@import url("components/medicine-and-health/font/_flaticon.css");
+@import url("components/material-icons/material-icons.css");
+@import url("components/medicine-and-health/font/flaticon.css");
 a {
   color: #73879c;
   text-decoration: none !important; }
