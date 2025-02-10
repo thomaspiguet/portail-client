@@ -377,7 +377,7 @@ body {
   body header.banner {
     text-align: center;
     color: white;
-    background-image: url("/img/bg-01.jpg");
+    background-image: url("https://thomaspiguet.github.io/portail-client/portail-client_files/img/bg-01.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: top center;
