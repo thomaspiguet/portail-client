@@ -377,7 +377,7 @@ a {
     body header.banner {
       text-align: center;
       color: white;
-      background-image: url("../img/bg-01.jpg");
+      background-image: url("bg-01.jpg");
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: top center;
