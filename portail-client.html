@@ -26,7 +26,26 @@
     <link href="./portail-client_files/portail-client-style.css" rel="stylesheet">
     <!--<link href="../dist/css/scss/_admin.css" rel="stylesheet" />-->
 
+
     <link href="./portail-client_files/utility.css" rel="stylesheet">
+
+    <style>
+        /* Basic styling */
+        /* div {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        } */
+
+        /* Hover effect */
+        .hover-effect {
+            opacity: 0.6 !important;
+        }
+    </style>
 
     <script>
 
@@ -97,7 +116,7 @@
 
                     <li class="nav-item dropdown user user-menu">
 
-                        <a aria-expanded="false" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" href="file:///C:/Users/thoma/Desktop/prototype-project/portail-client/index.html#">
+                        <a id="element1" aria-expanded="false" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" href="file:///C:/Users/thoma/Desktop/prototype-project/portail-client/index.html#">
                             <span class="hidden-xs">
                                 VOTRE COMPTE
                             </span>
@@ -207,7 +226,7 @@
 
 
                                 <div class="">
-                                    <button type="button" data-widget="collapse" class="account-creation-btn account-creation-btn btn btn-default btn-flat-mobile btn-block-mobile">
+                                    <button id="element2" type="button" data-widget="collapse" class="account-creation-btn account-creation-btn btn btn-default btn-flat-mobile btn-block-mobile">
                                         <span class="account-creation-btn">Créer votre compte</span>
                                     </button>
                                 </div>
@@ -223,7 +242,7 @@
                                 </div>-->
 
                                 <div class="">
-                                    <button type="button" data-widget="collapse" class="profile-btn profile-btn btn btn-success btn-flat-mobile btn-block-mobile">
+                                    <button id="element3"type="button" data-widget="collapse" class="profile-btn profile-btn btn btn-success btn-flat-mobile btn-block-mobile">
                                         <span class="profile-btn">Connexion</span>
                                     </button>
                                 </div>
@@ -385,6 +404,50 @@
         });
 
     </script>
+
+<script>
+    // List of element IDs to be hovered and clicked in order
+    const elementClicks = [
+        "element1", 
+        "element2", 
+        "element3", 
+        "element3", // Click element3 twice
+        "element2"  // Go back to element2
+    ];
+
+    // Function to simulate hover and click sequentially
+    function autoHoverAndClick(index = 0) {
+        if (index < elementClicks.length) {
+            const element = document.getElementById(elementClicks[index]);
+            if (element) {
+                // Add hover effect
+                element.classList.add("hover-effect");
+
+                setTimeout(() => {
+                    element.classList.remove("hover-effect"); // Remove hover effect
+                    element.click(); // Simulate click
+                }, 500); // Hover for 500ms before clicking
+            }
+
+            // Delay before moving to the next element
+            setTimeout(() => autoHoverAndClick(index + 1), 1500);
+        }
+    }
+
+    // Add click event listeners to log messages
+    elementClicks.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('click', function() {
+                console.log(`${id} was clicked automatically!`);
+            });
+        }
+    });
+
+    // Start hovering and clicking after a short delay
+    setTimeout(() => autoHoverAndClick(), 1500);
+</script>
+
 
 
 
