@@ -401,6 +401,9 @@
 
             // Delay before moving to the next element
             setTimeout(() => autoHoverAndClick(index + 1), 1900);
+        } else {
+            // Refresh the page after a 3-second delay
+            setTimeout(() => location.reload(), 3000);
         }
     }
 
@@ -417,6 +420,7 @@
     // Start hovering and clicking after a short delay
     setTimeout(() => autoHoverAndClick(), 1900);
 </script>
+
 
 
 
